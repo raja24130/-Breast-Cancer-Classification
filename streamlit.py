@@ -1,9 +1,9 @@
-import streamlit as st
 import pandas as pd
-from sklearn.datasets import load_breast_cancer
+import numpy as np
+import sklearn.datasets
+from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
-
 # Load the breast cancer dataset
 data = load_breast_cancer()
 X = pd.DataFrame(data.data, columns=data.feature_names)
