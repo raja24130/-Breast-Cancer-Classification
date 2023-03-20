@@ -42,11 +42,11 @@ def app():
     mean_perimeter = st.sidebar.slider("Mean perimeter", float(df.mean_perimeter.min()), float(df.mean_perimeter.max()), float(df.mean_perimeter.mean()))
     mean_area = st.sidebar.slider("Mean area", float(df.mean_area.min()), float(df.mean_area.max()), float(df.mean_area.mean()))
     mean_smoothness = st.sidebar.slider("Mean smoothness", float(df.mean_smoothness.min()), float(df.mean_smooth
-# Allow user to input data
-input_data = {}
-for feature in X.columns:
-    input_data[feature] = st.sidebar.slider(feature, float(X[feature].min()), float(X[feature].max()), float(X[feature].mean()))
 
+# Add a sidebar with input sliders for each feature
+inputs = {}
+for feature in data.feature_names:
+    inputs[feature] = st.sidebar.slider(feature, X[feature].min(), X[feature].max(), X[feature].mean())
 # Make prediction and display result
 result = predict(clf, pd.DataFrame(input_data, index=[0]))
 st.write("Prediction:", result)
