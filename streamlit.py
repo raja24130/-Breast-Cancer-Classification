@@ -43,11 +43,6 @@ def app():
     mean_area = st.sidebar.slider("Mean area", float(df.mean_area.min()), float(df.mean_area.max()), float(df.mean_area.mean()))
     mean_smoothness = st.sidebar.slider("Mean smoothness", float(df.mean_smoothness.min()), float(df.mean_smooth
 
-# Add a sidebar with input sliders for each feature
-input_data = (13.54,14.36,87.46,566.3,0.09779,0.08129,0.06664,0.04781,0.1885,0.05766,0.2699,0.7886,2.058,23.56,0.008462,0.0146,0.02387,0.01315,0.0198,0.0023,15.11,19.26,99.7,711.2,0.144,0.1773,0.239,0.1288,0.2977,0.07259)
-
-for feature in data.feature_names:
-    input_data[feature] = st.sidebar.slider(feature, X[feature].min(), X[feature].max(), X[feature].mean())
 # Make prediction and display result
 result = predict(clf, pd.DataFrame(input_data, index=[0]))
 st.write("Prediction:", result)
