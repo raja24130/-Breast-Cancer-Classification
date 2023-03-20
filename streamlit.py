@@ -44,11 +44,5 @@ def app():
     mean_smoothness = st.sidebar.slider("Mean smoothness", float(df.mean_smoothness.min()), float(df.mean_smooth
 
 
-# When the "Predict" button is clicked, make a prediction and show the result
- # When the "Predict" button is clicked, make a prediction and show the result
-if st.sidebar.button("Predict"):
-    data = pd.DataFrame([inputs])
-    result = predict(data)
-    st.write("Prediction:", result)                                                                                                 
 
                  
