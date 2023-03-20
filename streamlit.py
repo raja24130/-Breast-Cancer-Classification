@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 # Load the breast cancer dataset
-data = load_breast_cancer()
+data = sklearn.datasets.load_breast_cancer()
 X = pd.DataFrame(data.data, columns=data.feature_names)
 y = pd.Series(data.target)
 
