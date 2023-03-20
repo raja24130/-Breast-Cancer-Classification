@@ -43,6 +43,9 @@ def app():
     mean_area = st.sidebar.slider("Mean area", float(df.mean_area.min()), float(df.mean_area.max()), float(df.mean_area.mean()))
     mean_smoothness = st.sidebar.slider("Mean smoothness", float(df.mean_smoothness.min()), float(df.mean_smooth
 
-# Make prediction and display result
-result = predict(clf, pd.DataFrame(input_data, index=[0]))
-st.write("Prediction:", result)
+
+# When the "Predict" button is clicked, make a prediction and show the result
+if st.sidebar.button("Predict"):
+   breast_cancer_dataset  = pd.DataFrame([inputs])
+    result = predict(data)
+    st.write("Prediction:", result)
