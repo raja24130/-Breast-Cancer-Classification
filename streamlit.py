@@ -45,7 +45,10 @@ def app():
 
 
 # When the "Predict" button is clicked, make a prediction and show the result
+ # When the "Predict" button is clicked, make a prediction and show the result
 if st.sidebar.button("Predict"):
-   breast_cancer_dataset  = pd.DataFrame([inputs])
+    data = pd.DataFrame([inputs])
     result = predict(data)
-    st.write("Prediction:", result)
+    st.write("Prediction:", result)                                                                                                 
+
+                 
