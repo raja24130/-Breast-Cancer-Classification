@@ -3,8 +3,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
-# Load the breast cancer dataset
-breast_cancer_dataset = sklearn.datasets.load_breast_cancer()
 X = data_frame.drop(columns='label', axis=1)
 Y = data_frame['label']
 # Train the logistic regression model
