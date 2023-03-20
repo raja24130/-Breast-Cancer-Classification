@@ -3,8 +3,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
-X = data_frame.drop(columns='label', axis=1)
-Y = data_frame['label']
 # Train the logistic regression model
 clf = LogisticRegression()
 clf.fit(X, y)
