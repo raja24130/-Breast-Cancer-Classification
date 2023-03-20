@@ -11,9 +11,6 @@ input_data = (13.54,14.36,87.46,566.3,0.09779,0.08129,0.06664,0.04781,0.1885,0.0
 # change the input data to a numpy array
 input_data_as_numpy_array = np.asarray(input_data)
 
-# reshape the numpy array as we are predicting for one datapoint
-input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
-
 prediction = model.predict(input_data_reshaped)
 print(prediction)
 
